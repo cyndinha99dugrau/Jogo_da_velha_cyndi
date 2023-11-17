@@ -9,17 +9,19 @@ const JOGADOR_O = "O";
 
 let jogoAcabou = false;
 
-document.addEventiListener("click", (event)=> 
-    if (event.target.matches(".celula") && !jogoAcabou)
-) 
+document.addEventiListener("click", (event)=> {
+    if (event.target.matches(".celula") && !jogoAcabou){
+
 
 jogar(event.target.id);
+    }
+});
 
-function jogar (id)
+function jogar (id){
 
 const celula = document.getElementById(id);
 
-if (celula.textContent ==="")
+if (celula.textContent ==="") {
 
 turno= checarTurno ? JOGADOR_X : JOGADOR_O;
 
@@ -34,5 +36,9 @@ celula.classList.add(turno);
 celula.removeEventListener("click", jogar);
 
 verificatVencedor(turno);
+
+}
+}
+
 
 
