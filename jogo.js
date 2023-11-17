@@ -9,7 +9,7 @@ const JOGADOR_O = "O";
 
 let jogoAcabou = false;
 
-document.addEventiListener("click", (event)=> {
+document.addEventListener("click", (event)=> {
     if (event.target.matches(".celula") && !jogoAcabou){
 
 
